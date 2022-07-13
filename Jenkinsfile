@@ -37,7 +37,7 @@ pipeline {
             }
             steps {
                 echo 'Retrieving source from github' 
-                git branch: 'master',
+                git branch: 'main',
                     url: 'https://github.com/szernik/july2022-external.git'
                 echo 'Did we get the source?' 
                 sh 'ls -a'
