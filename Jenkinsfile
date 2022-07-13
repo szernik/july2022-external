@@ -88,7 +88,7 @@ pipeline {
                     }
             steps {
                 echo 'Set the image'
-                     sh "kubectl --kubeconfig=${WORKSPACE}/kube/.kube/config set image deployment/demo-ui demi-ui=${env.imageName}:${env.BUILD_NUMBER}"
+                     sh "kubectl --kubeconfig=${WORKSPACE}/kube/.kube/config set image deployment/demo-ui demo-ui=${env.imageName}:${env.BUILD_NUMBER}"
             }
         }     
         stage('Remove local docker image') {
